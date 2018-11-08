@@ -17,30 +17,19 @@ var gulp         = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 
 gulp.task('sass', function(){ // Создаем таск Sass
-	return gulp.src('app/sass/**/*.sass') // Берем источник
+	return gulp.src('app/sass/*.sass') // Берем источник
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
 		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
-		.pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
+		.pipe(gulp.dest('app/css/')) // Выгружаем результата в папку app/css
 		.pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
 
 gulp.task('sa', function(){ // Создаем таск Sass
-	return gulp.src('app/sass/*.scss') // Берем источник
+	return gulp.src('app/css/*.scss') // Берем источник
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass		
 		.pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
 		.pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
-
-
-  
-/*   gulp.src("app/css/style.css")
-    .pipe(notify({
-      message: "Ошибка в файле: <%= file.relative %> @ <%= options.date %>",
-      templateOptions: {
-        date: new Date()
-      }
-    }))
-   */
   
 gulp.task('imacss', function () {//DATE64
     gulp.src('app/img/*.jpg')
@@ -79,8 +68,7 @@ gulp.task('st', ['browser-sync', 'css-libs', 'scripts'], function() {
 
 });
 
-gulp.task('start', ['browser-sync', 'scripts'], function() {
-	gulp.watch('app/sass/**/*.sass', ['sass']); // Наблюдение за sass файлами в папке sass
+gulp.task('start', ['browser-sync', 'scripts'], function() {	
 	gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
 	gulp.watch('app/js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js
 	gulp.watch('app/css/**/*.css', browserSync.reload);   // Наблюдение за JS файлами в папке js
@@ -117,6 +105,8 @@ gulp.task('css-libs', ['sass'], function() {
 gulp.task('clean', function() {
 	return del.sync('dist'); // Удаляем папку dist перед сборкой
 });
+
+
 gulp.task('build', ['clean','img', 'scripts','css-libs'], function() {
 
 	var buildCss = gulp.src('app/css/*.css')// Переносим библиотеки в продакшен
