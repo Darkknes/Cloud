@@ -1,270 +1,441 @@
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.10.1.min.js'></script>
+<script type='text/javascript'>
+ $(window).on('load', function() {
+  $('#wrap_preloader').delay(1000).fadeToggle(1000);
+ });
+</script>
+
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
 
-    <title>Home</title>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <meta name="description" content="">
+ <meta name="author" content="">
+ <link rel="icon" href="favicon.ico">
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet"> 
-	<link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
+ <title>Home</title>
 
-    <header>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand brand-logo" href="#">BrandLogo</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="gallery.html">Gallery</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Product</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
-              </li>
-            </ul>
-            
-          </div>
-        </nav>
-      </div>
-    </header>
+ <!-- Bootstrap core CSS -->
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <link href="css/style.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="css/uikit.min.css">
+ <link rel="stylesheet" href="css/animate.min.css">
 
-    <main role="main">
+</head>
 
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-		  <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="first-slide" src="img/1.jpg" alt="First slide">
-            <div class="container">
-              <div class="carousel-caption">
-                <form class="form">
-				  <div class="form-group">
-					<label for="exampleInputEmail1">Email address</label>
-					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-					<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-				  </div>
-				  <div class="form-group">
-					<label for="exampleInputPassword1">Password</label>
-					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-				  </div>
-				  <div class="form-group form-check">
-					<input type="checkbox" class="form-check-input" id="exampleCheck1">
-					<label class="form-check-label" for="exampleCheck1">Check me out</label>
-				  </div>
-				  <button type="submit" class="btn btn-primary">Submit</button>
-				</form>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="second-slide" src="img/2.jpg" alt="Second slide">
-            <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>Another example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="third-slide" src="img/3.jpg" alt="Third slide">
-            <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>One more for good measure.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-              </div>
-            </div>
-          </div>
+<body>
 
-		  <div class="carousel-item">
-            <img class="third-slide" src="img/1.jpg" alt="fo slide">
-            <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>One more for good measure.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-              </div>
-            </div>
-          </div>
+ <header>
+  <div class="container">
+   <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand brand-logo" href="#">BrandLogo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="gallery.html">Gallery</a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">Product</a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">Contact</a>
+      </li>
+     </ul>
+
+    </div>
+   </nav>
+  </div>
+ </header>
+
+ <main role="main">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+   <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+   </ol>
+   <div class="carousel-inner">
+    <div class="carousel-item active">
+     <img class="first-slide" src="img/1.jpg" alt="First slide">
+     <div class="container">
+      <div class="carousel-caption">
+       <form class="form">
+        <div class="form-group">
+         <label for="exampleInputEmail1">Email address</label>
+         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+        <div class="form-group">
+         <label for="exampleInputPassword1">Password</label>
+         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group form-check">
+         <input type="checkbox" class="form-check-input" id="exampleCheck1">
+         <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+       </form>
       </div>
+     </div>
+    </div>
+    <div class="carousel-item">
+     <img class="second-slide" src="img/2.jpg" alt="Second slide">
+     <div class="container">
+      <div class="carousel-caption text-right">
+       <h1>Another example headline.</h1>
+       <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+       <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+      </div>
+     </div>
+    </div>
+    <div class="carousel-item">
+     <img class="third-slide" src="img/3.jpg" alt="Third slide">
+     <div class="container">
+      <div class="carousel-caption text-right">
+       <h1>One more for good measure.</h1>
+       <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+       <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+      </div>
+     </div>
+    </div>
+
+    <div class="carousel-item">
+     <img class="third-slide" src="img/1.jpg" alt="fo slide">
+     <div class="container">
+      <div class="carousel-caption text-right">
+       <h1>One more for good measure.</h1>
+       <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+       <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+   </a>
+   <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+   </a>
+  </div>
 
 
-      <!-- Marketing messaging and featurettes
+  <!-- Marketing messaging and featurettes
       ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <div class="container marketing">
-       <!-- START THE FEATURETTES -->
 
-        <hr class="featurette-divider">
+  <div class="container marketing">
+   <!-- START THE FEATURETTES -->
+   <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <iframe width="610" height="315" src="https://www.youtube-nocookie.com/embed/1La4QzGeaaQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
+   <div class="row featurette">
+    <div class="col-md-6">
+     <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+     <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    </div>
+    <div class="col-md-6">
+     <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/1La4QzGeaaQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+   </div>
 
-        <hr class="featurette-divider">
+   <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <iframe width="450" height="315" src="https://www.youtube-nocookie.com/embed/xcJtL7QggTI?start=2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
+   <div class="row featurette">
+    <div class="col-md-6 order-md-2">
+     <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+     <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    </div>
+    <div class="col-md-6 order-md-1">
+     <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/xcJtL7QggTI?start=2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+   </div>
 
-        <hr class="featurette-divider">
+   <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <iframe width="600" height="315" src="https://www.youtube-nocookie.com/embed/hVvEISFw9w0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
+   <div class="row featurette">
+    <div class="col-md-6">
+     <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+     <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    </div>
+    <div class="col-md-6">
+     <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/hVvEISFw9w0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+   </div>
 
-        <!-- /END THE FEATURETTES -->
-		<hr class="featurette-divider">
+   <!-- /END THE FEATURETTES -->
 
-		<script>
-			var elem = document.querySelector('.m-p-g');
+   <script>
+    var elem = document.querySelector('.m-p-g');
 
 			document.addEventListener('DOMContentLoaded', function() {
 				var gallery = new MaterialPhotoGallery(elem);
 			});
 		</script>
-      </div><!-- /.container -->
+  </div><!-- /.container -->
+  <hr>
+  <!-- Tabs -->
+  <!-- section 3 -->
+  <div class="uk-section uk-section-default uk-preserve-color">
+   <div class="uk-container">
+    <div class="uk-child-width-1-1@m uk-grid-match" uk-grid>
+     <div>
+      <div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay:1100; ">
+       <div class="sky-tabs sky-tabs-pos-top-left sky-tabs-anim-flip sky-tabs-response-to-icons">
+        <input type="radio" name="sky-tabs" checked id="sky-tab1" class="sky-tab-content-1">
+        <label for="sky-tab1"><span><span><i class="fa fa-bolt"></i>Tesla</span></span></label>
 
-      <!-- FOOTER -->
-       <footer>
-            <!-- Footer ID Begin -->
-            <div id="ff_p">
-               <div class="bg-texture-1">
-                  <div class="container">
-                     <div class="row pad-50">
-                        <div class="col-sm-3">
-                           <h3 class="h6">
-                              <strong>About</strong>          
-                           </h3>
-                           <!-- List -->
-                           <ul class="list-unstyled">
-                              <li><a class="u-list" href="#">Agency</a></li>
-                              <li><a class="u-list" href="#">Start-Up</a></li>
-                              <li><a class="u-list" href="#">Business</a></li>
-                              <li><a class="u-list" href="#">Event</a></li>
-                           </ul>
-                           <!-- End List -->
-                        </div>
-                        <div class="col-sm-3">
-                           <h3 class="h6">
-                              <strong>Services</strong>          
-                           </h3>
-                           <!-- List -->
-                           <ul class="list-unstyled">
-                              <li><a class="u-list" href="#">Agency</a></li>
-                              <li><a class="u-list" href="#">Start-Up</a></li>
-                              <li><a class="u-list" href="#">Business</a></li>
-                              <li><a class="u-list" href="#">Services</a></li>
-                           </ul>
-                           <!-- End List -->
-                        </div>
-                        <div class="col-sm-3">
-                           <h3 class="h6">
-                              <strong>Account</strong>          
-                           </h3>
-                           <!-- List -->
-                           <ul class="list-unstyled">
-                              <li><a class="u-list" href="#">Profile</a></li>
-                              <li><a class="u-list" href="#">User Contacts</a></li>
-                              <li><a class="u-list" href="#">Projects</a></li>
-                              <li><a class="u-list" href="#">My Account</a></li>
-                           </ul>
-                           <!-- End List -->
-                        </div>
-                        <div class="col-md-3">
-                           <h3 class="h6 mb-4">
-                              <strong>Can you download our app below store.</strong>          
-                           </h3>
-                           <!-- Button -->
-                           <button type="button" class="btn btn-xs  btn-dark u-btn-dark text-left mb-2">
-                           <span class="media align-items-center">
-                           <span class="d-flex mr-3">
-                           <span class="fa fa-apple"></span>              </span>
-                           <span class="media-body">
-                           <span class="d-block font-size-13">Download</span>
-                           <strong class="font-size-13">App Store</strong>              </span>            </span>          </button>
-                           <!-- End Button -->
-                           <!-- Button -->
-                           <button type="button" class="btn btn-xs btn-dark u-btn-dark u-btn-wide transition-3d-hover text-left mb-2">
-                           <span class="media align-items-center">
-                           <span class="d-flex mr-3">
-                           <span class="fa fa-play"></span>              </span>
-                           <span class="media-body">
-                           <span class="d-block font-size-13">Get it on</span>
-                           <strong class="font-size-13">Google Play</strong>              </span>            </span>          </button>
-                           <!-- End Button -->
-                        </div>
-                     </div>
-                  </div>
-                  <hr>
-                  <div class="container text-center u-space">
-                     <!-- Logo -->
-                     <a class="d-inline-block mb-2" href="index.html" aria-label="Front">
-                     <img src="img/logo.png" alt="Logo" class="img-fluid"></a>
-                     <!-- End Logo -->
-                     <p class="small text-gray">©2018Designcollection. All rights reserved.</p>
-                  </div>
-               </div>
-            </div>
-         </footer>
-    </main>
-<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-sort-asc" aria-hidden="true"></i></button>
-      <!-- Bootstrap core JavaScript
+        <input type="radio" name="sky-tabs" id="sky-tab2" class="sky-tab-content-2">
+        <label for="sky-tab2"><span><span><i class="fa fa-picture-o"></i>da Vinci</span></span></label>
+
+        <input type="radio" name="sky-tabs" id="sky-tab3" class="sky-tab-content-3">
+        <label for="sky-tab3"><span><span><i class="fa fa-cogs"></i>Einstein</span></span></label>
+
+        <input type="radio" name="sky-tabs" id="sky-tab4" class="sky-tab-content-4">
+        <label for="sky-tab4"><span><span><i class="fa fa-globe"></i>Newton</span></span></label>
+
+        <ul>
+         <li class="sky-tab-content-1">
+          <div class="typography">
+           <h1>Nikola Tesla</h1>
+           <p>Serbian-American inventor, electrical engineer, mechanical engineer, physicist, and futurist best known for his contributions to the design of the modern alternating current (AC) electrical supply system.</p>
+           <p>Tesla started working in the telephony and electrical fields before emigrating to the United States in 1884 to work for Thomas Edison. He soon struck out on his own with financial backers, setting up laboratories/companies to develop
+            a range of electrical devices. His patented AC induction motor and transformer were licensed by George Westinghouse, who also hired Tesla as a consultant to help develop an alternating current system. Tesla is also known for his
+            high-voltage, high-frequency power experiments in New York and Colorado Springs which included patented devices and theoretical work used in the invention of radio communication, for his X-ray experiments, and for his ill-fated attempt
+            at intercontinental wireless transmission in his unfinished Wardenclyffe Tower project.</p>
+           <p>Tesla's achievements and his abilities as a showman demonstrating his seemingly miraculous inventions made him world-famous. Although he made a great deal of money from his patents, he spent a lot on numerous experiments. He lived for
+            most of his life in a series of New York hotels although the end of his patent income and eventual bankruptcy led him to live in diminished circumstances. Tesla still continued to invite the press to parties he held on his birthday to
+            announce new inventions he was working and make (sometimes unusual) statements. Because of his pronouncements and the nature of his work over the years, Tesla gained a reputation in popular culture as the archetypal "mad scientist". He
+            died in room 3327 of the New Yorker Hotel on 7 January 1943.</p>
+           <p class="text-right"><em>Find out more about Nikola Tesla from <a href="http://en.wikipedia.org/wiki/Nikola_Tesla" target="_blank">Wikipedia</a>.</em></p>
+          </div>
+         </li>
+
+         <li class="sky-tab-content-2">
+          <div class="typography">
+           <h1>Leonardo da Vinci</h1>
+           <p>Italian Renaissance polymath: painter, sculptor, architect, musician, mathematician, engineer, inventor, anatomist, geologist, cartographer, botanist, and writer. His genius, perhaps more than that of any other figure, epitomized the
+            Renaissance humanist ideal. Leonardo has often been described as the archetype of the Renaissance Man, a man of "unquenchable curiosity" and "feverishly inventive imagination". He is widely considered to be one of the greatest painters
+            of all time and perhaps the most diversely talented person ever to have lived. According to art historian Helen Gardner, the scope and depth of his interests were without precedent and "his mind and personality seem to us superhuman,
+            the man himself mysterious and remote". Marco Rosci states that while there is much speculation about Leonardo, his vision of the world is essentially logical rather than mysterious, and that the empirical methods he employed were
+            unusual for his time.</p>
+           <p>Born out of wedlock to a notary, Piero da Vinci, and a peasant woman, Caterina, at Vinci in the region of Florence, Leonardo was educated in the studio of the renowned Florentine painter, Verrocchio. Much of his earlier working life
+            was spent in the service of Ludovico il Moro in Milan. He later worked in Rome, Bologna and Venice, and he spent his last years in France at the home awarded him by Francis I.</p>
+           <p class="text-right"><em>Find out more about Leonardo da Vinci from <a href="http://en.wikipedia.org/wiki/Leonardo_da_Vinci" target="_blank">Wikipedia</a>.</em></p>
+          </div>
+         </li>
+
+         <li class="sky-tab-content-3">
+          <div class="typography">
+           <h1>Albert Einstein</h1>
+           <p>German-born theoretical physicist who developed the general theory of relativity, one of the two pillars of modern physics (alongside quantum mechanics). While best known for his mass–energy equivalence formula E = mc2 (which has been
+            dubbed "the world's most famous equation"), he received the 1921 Nobel Prize in Physics "for his services to theoretical physics, and especially for his discovery of the law of the photoelectric effect". The latter was pivotal in
+            establishing quantum theory.</p>
+           <p>Near the beginning of his career, Einstein thought that Newtonian mechanics was no longer enough to reconcile the laws of classical mechanics with the laws of the electromagnetic field. This led to the development of his special
+            theory of relativity. He realized, however, that the principle of relativity could also be extended to gravitational fields, and with his subsequent theory of gravitation in 1916, he published a paper on the general theory of
+            relativity.</p>
+           <p>He continued to deal with problems of statistical mechanics and quantum theory, which led to his explanations of particle theory and the motion of molecules. He also investigated the thermal properties of light which laid the
+            foundation of the photon theory of light. In 1917, Einstein applied the general theory of relativity to model the large-scale structure of the universe.</p>
+           <p class="text-right"><em>Find out more about Albert Einstein from <a href="http://en.wikipedia.org/wiki/Albert_Einstein" target="_blank">Wikipedia</a>.</em></p>
+          </div>
+         </li>
+
+         <li class="sky-tab-content-4">
+          <div class="typography">
+           <h1>Isaac Newton</h1>
+           <p>English physicist and mathematician who is widely regarded as one of the most influential scientists of all time and as a key figure in the scientific revolution. His book Philosophiæ Naturalis Principia Mathematica ("Mathematical
+            Principles of Natural Philosophy"), first published in 1687, laid the foundations for most of classical mechanics. Newton also made seminal contributions to optics and shares credit with Gottfried Leibniz for the invention of the
+            infinitesimal calculus.</p>
+           <p>Newton's Principia formulated the laws of motion and universal gravitation that dominated scientists' view of the physical universe for the next three centuries. It also demonstrated that the motion of objects on the Earth and that of
+            celestial bodies could be described by the same principles. By deriving Kepler's laws of planetary motion from his mathematical description of gravity, Newton removed the last doubts about the validity of the heliocentric model of the
+            cosmos.</p>
+           <p class="text-right"><em>Find out more about Isaac Newton from <a href="http://en.wikipedia.org/wiki/Isaac_Newton" target="_blank">Wikipedia</a>.</em></p>
+          </div>
+         </li>
+        </ul>
+       </div>
+
+      </div>
+     </div>
+
+    </div>
+   </div>
+  </div>
+  <!--/ tabs -->
+  <hr>
+
+
+  <!-- FOOTER -->
+  <footer>
+   <!-- Footer ID Begin -->
+   <div id="ff_p">
+    <div class="bg-texture-1">
+     <div class="container">
+      <div class="row pad-50">
+       <div class="col-sm-3">
+        <h3 class="h6">
+         <strong>About</strong>
+        </h3>
+        <!-- List -->
+        <ul class="list-unstyled">
+         <li><a class="u-list" href="#">Agency</a></li>
+         <li><a class="u-list" href="#">Start-Up</a></li>
+         <li><a class="u-list" href="#">Business</a></li>
+         <li><a class="u-list" href="#">Event</a></li>
+        </ul>
+        <!-- End List -->
+       </div>
+       <div class="col-sm-3">
+        <h3 class="h6">
+         <strong>Services</strong>
+        </h3>
+        <!-- List -->
+        <ul class="list-unstyled">
+         <li><a class="u-list" href="#">Agency</a></li>
+         <li><a class="u-list" href="#">Start-Up</a></li>
+         <li><a class="u-list" href="#">Business</a></li>
+         <li><a class="u-list" href="#">Services</a></li>
+        </ul>
+        <!-- End List -->
+       </div>
+       <div class="col-sm-3">
+        <h3 class="h6">
+         <strong>Account</strong>
+        </h3>
+        <!-- List -->
+        <ul class="list-unstyled">
+         <li><a class="u-list" href="#">Profile</a></li>
+         <li><a class="u-list" href="#">User Contacts</a></li>
+         <li><a class="u-list" href="#">Projects</a></li>
+         <li><a class="u-list" href="#">My Account</a></li>
+        </ul>
+        <!-- End List -->
+       </div>
+       <div class="col-md-3">
+        <h3 class="h6 mb-4">
+         <strong>Can you download our app below store.</strong>
+        </h3>
+        <!-- Button -->
+        <button type="button" class="btn btn-xs  btn-dark u-btn-dark text-left mb-2">
+         <span class="media align-items-center">
+          <span class="d-flex mr-3">
+           <span class="fa fa-apple"></span> </span>
+          <span class="media-body">
+           <span class="d-block font-size-13">Download</span>
+           <strong class="font-size-13">App Store</strong> </span> </span> </button>
+        <!-- End Button -->
+        <!-- Button -->
+        <button type="button" class="btn btn-xs btn-dark u-btn-dark u-btn-wide transition-3d-hover text-left mb-2">
+         <span class="media align-items-center">
+          <span class="d-flex mr-3">
+           <span class="fa fa-play"></span> </span>
+          <span class="media-body">
+           <span class="d-block font-size-13">Get it on</span>
+           <strong class="font-size-13">Google Play</strong> </span> </span> </button>
+        <!-- End Button -->
+       </div>
+      </div>
+     </div>
+     <hr>
+     <div class="container text-center u-space">
+      <!-- Logo -->
+      <a class="d-inline-block mb-2" href="index.html" aria-label="Front">
+       <img src="img/logo.png" alt="Logo" class="img-fluid"></a>
+      <!-- End Logo -->
+      <p class="small text-gray">©2018Designcollection. All rights reserved.</p>
+     </div>
+    </div>
+   </div>
+  </footer>
+ </main>
+ <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-sort-asc" aria-hidden="true"></i></button>
+
+
+ <!-- Bootstrap core JavaScript
       ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster-->
-      <script  src="libs/jquery/dist/jquery.slim.js"></script>
-      <script src="js/bootstrap.min.js"></script> 
-	  <script src="js/gallery.js"></script> 
-	  <script src="js/js.js"></script>
-  </body>
+ <!-- Placed at the end of the document so the pages load faster-->
+ <script src="libs/jquery/dist/jquery.slim.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/gallery.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+ <script src="https://unpkg.com/flickity@2.1.2/dist/flickity.pkgd.js"></script>
+ <script src="js/uikit.min.js" charset="utf-8"></script>
+
+
+ <script>
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {
+   scrollFunction()
+  };
+
+  function scrollFunction() {
+   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+   } else {
+    document.getElementById("myBtn").style.display = "none";
+   }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+   document.body.scrollTop = 0; // For Safari
+   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+ </script>
+
+</body>
+
 </html>
+
+<div id="wrap_preloader">
+ <div class="contpre">
+  <div id="preloader">
+   <img src="./img/1.gif" alt="">
+
+  </div>
+  <style>
+   #preloader {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    z-index: 999999;
+    -webkit-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+    padding-top: 7%;
+
+   }
+
+   #wrap_preloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: -8px -8px;
+    background: #282828;
+    z-index: 9999;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 5px;
+    font-family: arial;
+    font-size: 50px;
+    padding-top: 410px;
+    overflow: hidden;
+   }
+  </style>
