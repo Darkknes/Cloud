@@ -3,13 +3,14 @@
 /* Gallery */
 .m-p-g {
   max-width: 100%;
-  margin: 0 auto; }
+  margin: 6px auto;
+  }
   .m-p-g__thumbs-img {
     margin: 0px;
     float: left;
     vertical-align: bottom;
     cursor: pointer;
-    z-index: 1;
+    z-index: 99;
     position: relative;
     opacity: 0;
     filter: brightness(100%);
@@ -28,7 +29,7 @@
       }
   .m-p-g__fullscreen {
     position: fixed;
-    z-index: 10;
+    z-index: 99999999999;
     top: 0;
     left: 0;
     right: 0;
@@ -45,7 +46,9 @@
       transition: background .25s ease-out,
  visibility .01s 0s linear;
       visibility: visible;
-      background: rgba(37, 39, 41, 0.69); }
+      background: rgba(37, 39, 41, 0.69);
+      z-index: 1111;
+      }
     .m-p-g__fullscreen-img {
       pointer-events: none;
       position: absolute;
@@ -70,12 +73,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 200;
+    z-index: 20000;
     height: 20vh;
     background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.55) 100%);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
     .m-p-g__controls.active {
       opacity: 1;
       visibility: visible; }
@@ -168,19 +172,21 @@
 header {
     height: 120px;
     padding: 19px;
+    background: rgb(27, 30, 34);
 }
 .brand-logo {
-        border: 2px solid rgb(144, 185, 246);
-        padding: 5px 15px;
+       border: 1px solid rgb(139, 195, 74);
+	   padding: 7px 18px;
+	   margin-top: 1px;
       }
 
 .nav-item .nav-link{
         color: #444;
-		padding: 10px 40px !important;
-		margin-left: 10px;
-		margin-right: 10px;
-		font-size: 17px;
-		font-weight: 600;
+        padding: 10px 30px !important;
+        margin-left: 5px;
+		margin-right: 5px;
+		font-size: 18px;
+		font-weight: 400;
 }
 
 .nav-item::after{
@@ -189,17 +195,18 @@ header {
         position: relative;
         left: 50%;
         width: 0px;
-        border-bottom: 5px solid rgb(144, 185, 246); 
-        transition: all ease-in-out .2s; }
+        border-bottom: 1px solid rgb(139, 195, 74);
+        transition: all ease-in-out .2s;
+        }
 
 .nav-item:hover::after {
         width: 80%;
         left: 15px;
-        margin-top: -5px;
+        margin-top: 1px;
 }
 /* Carousel base class */
 .carousel {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -211,7 +218,7 @@ header {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 55rem;
+  height: 60rem;
   background-color: #777;
 }
 .carousel-item > img {
@@ -219,17 +226,17 @@ header {
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 55rem;
+  height: 66rem;
 }
 
 .carousel-caption:first-child {
-    bottom: -300px;
+    bottom: -270px;
     z-index: 10;
     background: rgba(0, 0, 0, 0.29);
-    padding: 30px;
+    padding: 40px;
     float: right;
     position: relative;
-    width: 70%;
+    width: 75%;
 }
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -291,9 +298,9 @@ img.logo {
     position: relative;
 }
 .form {
-    
-    padding: 25px;
+    padding: 10px;
     text-align: left;
+    background: rgba(0, 0, 0, 0.04);
 }
 /* base style */
 
@@ -592,7 +599,7 @@ ul.social-icons {
 
 li.nav-item {
     z-index: 111111;
-    background: #fff;
+    /* background: #fff; */
 }
 
 .sky-tabs,
@@ -1855,8 +1862,8 @@ font-family: "Poppins", Helvetica, Arial, sans-serif;
 #myBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
-       position: fixed;
-    bottom: 27px;
+    position: fixed;
+    bottom: 24px;
     right: 43px;
     z-index: 99;
     border: none;
@@ -1864,7 +1871,7 @@ font-family: "Poppins", Helvetica, Arial, sans-serif;
     background-color: #262829;
     color: rgb(255, 255, 255);
     cursor: pointer;
-    padding: 3px;
+    padding-top:14px;
     border-radius: 1px;
     font-size: 40px;
     width: 50px;
@@ -1875,7 +1882,7 @@ font-family: "Poppins", Helvetica, Arial, sans-serif;
     background-color: #555; /* Add a dark-grey background on hover */
 }
 nav.navbar.navbar-expand-lg a {
-    color: #333;
+    color: #fff;
 }
 .progress-bar.progress-bar-success {
     background: #8BC34A;
