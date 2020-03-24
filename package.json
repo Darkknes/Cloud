@@ -8,7 +8,8 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-imacss": "^1.0.0",
     "gulp-notify": "^3.2.0",
-    "gulp-uncss": "^1.0.6"
+    "gulp-uncss": "^1.0.6",
+    "natives": "^1.1.6"
   },
   "devDependencies": {
     "browser-sync": "^2.26.0",
